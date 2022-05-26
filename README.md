@@ -19,10 +19,10 @@ I have the passion for both tech && art and I will treasure any opportunity to p
 
 ## Table of Contents
    
-* 
-*
-*
-* [An analysis on Clustering based on Kruskal’s Algorithm](https://github.com/xiajingdongning/liuyangli)
+* Python -Game
+* Java - GUI
+* Computer Graphics
+* Machine Learning[An analysis on Clustering based on Kruskal’s Algorithm](https://github.com/xiajingdongning/liuyangli)
 
 ## Screenshots
 
