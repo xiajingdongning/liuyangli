@@ -7,15 +7,15 @@
   *Yangli Liu*
   
 * How many hours did it take you to complete this final project?   *Around 45 hours in total.*
-* Did you collaborate or share ideas with any other people?  * Especially thanks to Prinesh Bansal for giving insights on obj file loading part.*
+* Did you collaborate or share ideas with any other people?   *Especially thanks to Prinesh Bansal for giving insights on obj file loading part.*
 * Did you use any external resources? 
   * *https://learnopengl.com/Lighting/Basic-Lighting*
   * *https://learnopengl.com/Model-Loading/Mesh*
   
-  * What was the most interesting part of the Final Assignment? How could the instructor improve the final project? * How to implement different shaders to different object and even based on player's position.*
+  * What was the most interesting part of the Final Assignment? How could the instructor improve the final project? *How to implement different shaders to different object and even based on player's position.*
 
 <img src="./part1/media/MyTown01.jpg" alt="picture">
-<img src="./part1/media/MyTown02.jpg" width="800px" alt="picture">
+<img src="./part1/media/MyTown02.jpg" alt="picture">
 
 ### Rubric
 
