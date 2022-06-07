@@ -20,7 +20,6 @@
 * What was the most interesting part of this project? *How to create a concrete looping experience, how to create a straightforward and user-friendly interface, and how to achieve aesthetic appearance of design.*
 
 <img src="./media/Cover.jpg" alt="picture">
-<img src="./media/Interface.jpg" width="600px" alt="picture">
 
 ### Abstract
 *Famous Artist Introduction Book is an interactive Java application that introduces the five most famous oil painting artists to the audience. 
