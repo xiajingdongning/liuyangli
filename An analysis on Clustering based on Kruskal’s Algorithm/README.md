@@ -20,7 +20,7 @@
 * What was the most interesting part of this project? *How to implement different algorithms to achieve the clustering outcomes and using CFSFDP to improve Kruskal Clustering.*
 
 <img src="./media/Silhoutte Analysis.png" alt="picture">
-<img src="./media/Original data.png" align="center" alt="picture">
+<img src="./media/Original data.png" alt="picture">
 
 ### Abstract
 *In this project, we were exploring the performance of Kruskal's Algorithm on clustering. 
@@ -35,15 +35,20 @@ In this project, we are going to further explore Kruskal-based clustering and K-
 After that, we will discuss some potential improvements using different distance formula and new techniques for our clustering approach.
 
 ### How to run this project
-All the data files is in the data folder. We use python to create the project. You can use any IDE or IDLE to run the scripts. For the kruskal script [Kruskal.py](./src/Kruskal.py), you should try to compile the datas with the script.
+All the data files is in the data folder. We use python to create the project. You can use any IDE or IDLE to run the scripts. 
+In the command prompt to check is python and pip is installed on your system: python --version
+For the kruskal script [Kruskal.py](./src/Kruskal.py), you should try to compile the datas with the script.
 If you know how to use command line, you can modify [Kmeans.py](./src/Kmeans.py) to your needs, but you should be able to type `python3 kmeans.py` and then run the generated executable. 
 You can also modify [Final_Improvement.py](./src/Final_Improvement.py) to your needs, then run the generated executable. 
 In order to do the ploting(visual representation), you will need to import some prebuilt plug-in or libraries including matplotlib.pyplot, sys, math, numpy, pandas, random, argparse and scipy.
+Matplotlib can be installed using pip. The following command is run in the command prompt to install Matplotlib: pip install matplotlib
 [Silhouette.py](./src/Silhouette.py) script is only for evaluating the existing clustering methods and need to be compiled with data file in the same driver.
 
-<img src="./media/Fixed Density Peak Center Finding(CFSFDP).png" align="center" alt="picture">
-<img src="./media/Evaluation of Kruskal Clustering by CFSFDP centers.png" align="center" alt="picture">
-<img src="./media/Improved Kruskal Clustering by CFSFDP.png" align="center" alt="picture">
+<p align="center">
+  <img src="./media/Fixed Density Peak Center Finding(CFSFDP).png" alt="picture">
+  <img src="./media/Evaluation of Kruskal Clustering by CFSFDP centers.png" alt="picture">
+  <img src="./media/Improved Kruskal Clustering by CFSFDP.png" alt="picture">
+</p>
 
 ### Deliverables
 * I commit all codes to this repository src folder.
