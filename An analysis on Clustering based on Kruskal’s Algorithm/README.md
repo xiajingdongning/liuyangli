@@ -36,8 +36,8 @@ After that, we will discuss some potential improvements using different distance
 
 ### How to run this project
 All the data files is in the data folder. We use python to create the project. You can use any IDE or IDLE to run the scripts. For the kruskal script [Kruskal.py](./src/Kruskal.py), you should try to compile the datas with the script.
-If you know how to use command line, you can modify [kmeans.py](./src/kmeans.py) to your needs, but you should be able to type `python3 kmeans.py` and then run the generated executable. 
-You can also modify [Improvements to the Kruskal’s clustering.py](./src/Improvements to the Kruskal’s clustering.py) to your needs, then run the generated executable. 
+If you know how to use command line, you can modify [Kmeans.py](./src/Kmeans.py) to your needs, but you should be able to type `python3 kmeans.py` and then run the generated executable. 
+You can also modify [Final_Improvement.py](./src/Final_Improvement.py) to your needs, then run the generated executable. 
 In order to do the ploting(visual representation), you will need to import some prebuilt plug-in or libraries including matplotlib.pyplot, sys, math, numpy, pandas, random, argparse and scipy.
 [Silhouette.py](./src/Silhouette.py) script is only for evaluating the existing clustering methods and need to be compiled with data file in the same driver.
 
@@ -46,7 +46,7 @@ In order to do the ploting(visual representation), you will need to import some 
 <img src="./media/Improved Kruskal Clustering by CFSFDP.png" alt="picture">
 
 ### Deliverables
-* I commit my code to this repository src folder.
+* I commit all codes to this repository src folder.
 * Upload the final report and the presentation deck to their corresponding folders.
-* Put a link to a youtube/vimeo video in README.md.
+* Put a link to a youtube video in README.md.
 
