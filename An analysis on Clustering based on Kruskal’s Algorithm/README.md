@@ -36,12 +36,12 @@ After that, we will discuss some potential improvements using different distance
 
 ### How to run this project
 All the data files is in the data folder. We use python to create the project. You can use any IDE or IDLE to run the scripts. 
-In the command prompt to check is python and pip is installed on your system: python --version
+*In the command prompt to check is python and pip is installed on your system: python --version*
 For the kruskal script [Kruskal.py](./src/Kruskal.py), you should try to compile the datas with the script.
 If you know how to use command line, you can modify [Kmeans.py](./src/Kmeans.py) to your needs, but you should be able to type `python3 kmeans.py` and then run the generated executable. 
 You can also modify [Final_Improvement.py](./src/Final_Improvement.py) to your needs, then run the generated executable. 
 In order to do the ploting(visual representation), you will need to import some prebuilt plug-in or libraries including matplotlib.pyplot, sys, math, numpy, pandas, random, argparse and scipy.
-Matplotlib can be installed using pip. The following command is run in the command prompt to install Matplotlib: pip install matplotlib
+*Matplotlib can be installed using pip. The following command is run in the command prompt to install Matplotlib: pip install matplotlib*
 [Silhouette.py](./src/Silhouette.py) script is only for evaluating the existing clustering methods and need to be compiled with data file in the same driver.
 
 <p align="center">
