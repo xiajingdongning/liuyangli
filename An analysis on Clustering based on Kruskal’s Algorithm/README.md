@@ -20,7 +20,7 @@
 * What was the most interesting part of this project? *How to implement different algorithms to achieve the clustering outcomes and using CFSFDP to improve Kruskal Clustering.*
 
 <img src="./media/Silhoutte Analysis.png" alt="picture">
-<img src="./media/Original data.png" alt="picture">
+<img src="./media/Original data.png" align="center" alt="picture">
 
 ### Abstract
 *In this project, we were exploring the performance of Kruskal's Algorithm on clustering. 
@@ -41,9 +41,9 @@ You can also modify [Final_Improvement.py](./src/Final_Improvement.py) to your n
 In order to do the ploting(visual representation), you will need to import some prebuilt plug-in or libraries including matplotlib.pyplot, sys, math, numpy, pandas, random, argparse and scipy.
 [Silhouette.py](./src/Silhouette.py) script is only for evaluating the existing clustering methods and need to be compiled with data file in the same driver.
 
-<img src="./media/Fixed Density Peak Center Finding(CFSFDP).png" alt="picture">
-<img src="./media/Evaluation of Kruskal Clustering by CFSFDP centers.png" alt="picture">
-<img src="./media/Improved Kruskal Clustering by CFSFDP.png" alt="picture">
+<img src="./media/Fixed Density Peak Center Finding(CFSFDP).png" align="center" alt="picture">
+<img src="./media/Evaluation of Kruskal Clustering by CFSFDP centers.png" align="center" alt="picture">
+<img src="./media/Improved Kruskal Clustering by CFSFDP.png" align="center" alt="picture">
 
 ### Deliverables
 * I commit all codes to this repository src folder.
