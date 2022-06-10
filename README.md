@@ -27,11 +27,11 @@ I have the passion for both tech && art and I will treasure any opportunity to p
 ## Screenshots
 ![MasterMind](./Mastermind/media/Interface.png)
 
-![Famous Artist Introduction Book](./FamousArtistIntroductionBook/media/Cover.png)
+![Famous Artist Introduction Book](./Famous Artist Introduction Book/media/Cover.jpg)
 
-![My Little Town](./My%20Little%20Town/part1/media/MyTown01.png)
+![My Little Town](./My Little Town/part1/media/MyTown01.jpg)
 
-![An analysis on Clustering based on Kruskal’s Algorithm](./AAn%20analysis%20on%20Clustering%20based%20on%20Kruskal%E2%80%99s%20Algorithm/media/Improved Kruskal Clustering by CFSFDP.png)
+![An analysis on Clustering based on Kruskal’s Algorithm](./An analysis on Clustering based on Kruskal’s Algorithm/media/Improved Kruskal Clustering by CFSFDP.png)
 
 
 
