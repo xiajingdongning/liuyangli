@@ -25,12 +25,13 @@ I have the passion for both tech && art and I will treasure any opportunity to p
 * Algorithm - Machine Learning [An analysis on Clustering based on Kruskal’s Algorithm](https://github.com/xiajingdongning/liuyangli/tree/master/An%20analysis%20on%20Clustering%20based%20on%20Kruskal%E2%80%99s%20Algorithm)
 
 ## Screenshots
-
+![MasterMind](./Mastermind/media/Interface.png)
+![MasterMind](./Mastermind/media/Feedback.png)
 ![Famous Artist Introduction Book](./Famous Artist Introduction Book/media/Cover.png)
 
 [My Little Town](./My Little Town/part1/media/MyTown01.png)
 
 [An analysis on Clustering based on Kruskal’s Algorithm](./An analysis on Clustering based on Kruskal’s Algorithm/media/Improved Kruskal Clustering by CFSFDP.png)
 
-![MasterMind](./Mastermind/media/Interface.png)
+
 
