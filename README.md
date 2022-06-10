@@ -28,7 +28,6 @@ I have the passion for both tech && art and I will treasure any opportunity to p
 ![MasterMind](./Mastermind/media/Interface.png)
 ![Famous Artist Introduction Book](https://github.com/xiajingdongning/liuyangli/blob/master/Famous%20Artist%20Introduction%20Book/media/Cover.jpg)
 ![My Little Town](https://github.com/xiajingdongning/liuyangli/blob/master/My%20Little%20Town/part1/media/MyTown01.jpg)
-![An analysis on Clustering based on Kruskal’s Algorithm](https://github.com/xiajingdongning/liuyangli/blob/master/An%20analysis%20on%20Clustering%20based%20on%20Kruskal%E2%80%99s%20Algorithm/media/Improved%20Kruskal%20Clustering%20by%20CFSFDP.png)
-
+![An analysis on Clustering based on Kruskal’s Algorithm](https://github.com/xiajingdongning/liuyangli/blob/master/An%20analysis%20on%20Clustering%20based%20on%20Kruskal%E2%80%99s%20Algorithm/media/Cover.jpg)
 
 
