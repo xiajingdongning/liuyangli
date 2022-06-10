@@ -7,7 +7,7 @@ You might find detailed information about each projects in its own section.
 
 ## Authors
 
-- [Yangli Liu(Amy)](amy.liu.fz@gmail.com)
+- [Yangli Liu(Amy)](https://www.liuyangli.ml)
 
 
 ## 🚀 About Me
@@ -19,15 +19,18 @@ I have the passion for both tech && art and I will treasure any opportunity to p
 
 ## Table of Contents
    
-* Python - Game [MasterMind]
-* Java - GUI [Famous Artist Introduction Book]
-* Computer Graphics - Shader [My Little Town]
-* Algorithm - Machine Learning [An analysis on Clustering based on Kruskal’s Algorithm]
+* Python - Game [MasterMind](https://github.com/xiajingdongning/liuyangli/tree/master/Mastermind)
+* Java - GUI [Famous Artist Introduction Book](https://github.com/xiajingdongning/liuyangli/tree/master/Famous%20Artist%20Introduction%20Book)
+* Computer Graphics - Shader [My Little Town](https://github.com/xiajingdongning/liuyangli/tree/master/My%20Little%20Town)
+* Algorithm - Machine Learning [An analysis on Clustering based on Kruskal’s Algorithm](https://github.com/xiajingdongning/liuyangli/tree/master/An%20analysis%20on%20Clustering%20based%20on%20Kruskal%E2%80%99s%20Algorithm)
 
 ## Screenshots
 
 ![MasterMind](./Mastermind/media/Interface.png)
+
 ![Famous Artist Introduction Book](./Famous Artist Introduction Book/media/Cover.png)
+
 ![My Little Town](./My Little Town/part1/media/MyTown01.png)
+
 ![An analysis on Clustering based on Kruskal’s Algorithm](./An analysis on Clustering based on Kruskal’s Algorithm/media/Improved Kruskal Clustering by CFSFDP.png)
 
