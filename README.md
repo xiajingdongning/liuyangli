@@ -27,7 +27,7 @@ I have the passion for both tech && art and I will treasure any opportunity to p
 ## Screenshots
 ![MasterMind](./Mastermind/media/Interface.png)
 
-![Famous Artist Introduction Book](./Famous%20Artist%20Introduction%20Book/media/Cover.png)
+![Famous Artist Introduction Book](./FamousArtistIntroductionBook/media/Cover.png)
 
 ![My Little Town](./My%20Little%20Town/part1/media/MyTown01.png)
 
