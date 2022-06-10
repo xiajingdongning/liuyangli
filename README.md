@@ -7,7 +7,7 @@ You might find detailed information about each projects in its own section.
 
 ## Authors
 
-- [Yangli Liu(Amy)](https://www.liuyangli.ml)
+- [Yangli Liu(Amy)](http://www.liuyangli.ml)
 
 
 ## 🚀 About Me
