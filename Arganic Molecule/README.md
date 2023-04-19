@@ -18,7 +18,7 @@
   
 * What was the most interesting part of this project? *How to implement an existing database into our mobile app, how to use Firebase for real time message exchange and how to use Sceneform for Augmented Reality.*
 
-<img src="./media/ARMol.png" alt="picture">
+<img src="./media/ARMol.PNG" alt="picture">
 <img src="./media/AR.jpg" alt="picture">
 
 ### Abstract
