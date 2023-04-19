@@ -39,7 +39,7 @@ on your screen. This will help you learn things quickly in a fun way because ato
 
 ### How to run this project
 All the data files is in the app folder. We use java to create the project. You can use Android Studio to run the project. 
-I also put a prebuild apk in the root folder called [ARganic Molecule.apk](./ARganic Molecule.apk) that you can directly sideload into your android phone for testing.
+I also put a prebuild apk in the root folder called [ARganic Molecule.apk](https://github.com/xiajingdongning/liuyangli/blob/master/Arganic%20Molecule/ARganic%20Molecule.apk) that you can directly sideload into your android phone for testing.
 
 
 <p align="center">
