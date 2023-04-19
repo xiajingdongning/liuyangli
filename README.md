@@ -23,9 +23,10 @@ I have the passion for both tech && art and I will treasure any opportunity to p
 * Java - GUI [Famous Artist Introduction Book](https://github.com/xiajingdongning/liuyangli/tree/master/Famous%20Artist%20Introduction%20Book)
 * Computer Graphics - Shader [My Little Town](https://github.com/xiajingdongning/liuyangli/tree/master/My%20Little%20Town)
 * Algorithm - Machine Learning [An analysis on Clustering based on Kruskal’s Algorithm](https://github.com/xiajingdongning/liuyangli/tree/master/An%20analysis%20on%20Clustering%20based%20on%20Kruskal%E2%80%99s%20Algorithm)
-* Mobile App Development - Android && AR [Arganic Molecule]
+* Mobile App Development - Android && AR [Arganic Molecule](https://github.com/xiajingdongning/liuyangli/tree/master/Arganic%20Molecule)
 
 ## Screenshots
 ![Famous Artist Introduction Book](https://github.com/xiajingdongning/liuyangli/blob/master/Famous%20Artist%20Introduction%20Book/media/Cover.jpg)
 ![My Little Town](https://github.com/xiajingdongning/liuyangli/blob/master/My%20Little%20Town/part1/media/MyTown01.jpg)
+![Arganic Molecule](https://github.com/xiajingdongning/liuyangli/blob/master/Arganic%20Molecule/media/ARMol.PNG)
 
