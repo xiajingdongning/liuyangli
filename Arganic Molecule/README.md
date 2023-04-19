@@ -18,7 +18,8 @@
   
 * What was the most interesting part of this project? *How to implement an existing database into our mobile app, how to use Firebase for real time message exchange and how to use Sceneform for Augmented Reality.*
 
-<img src="./media/ArMol.png" alt="picture">
+<img src="./media/ARMol.png" alt="picture">
+<img src="./media/AR.jpg" alt="picture">
 
 ### Abstract
 *ARganic Molecule is an Android mobile App project that focuses on the educational purpose of Protein Molecule.* 
@@ -44,7 +45,6 @@ I also put a prebuild apk in the root folder called ARganic Molecule.apk that yo
   <img src="./media/Drop Down Menu.jpg" alt="picture">
   <img src="./media/2D Animation.jpg" alt="picture">
   <img src="./media/Access.jpg" alt="picture">
-  <img src="./media/AR.jpg" alt="picture">
 </p>
 
 ### Deliverables
