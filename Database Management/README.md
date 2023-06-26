@@ -1,6 +1,6 @@
 # Database Management - RStudio && SQLite && MySQL [Design & Implement a Relational Database] 
 
-## [HTML Page] (https://github.com/xiajingdongning/liuyangli/blob/master/Database%20Management/Design%20%26%20Implement%20a%20Relational%20Database/Practicum%20I.nb.html)
+## [HTML Page] (https://htmlpreview.github.io/?https://github.com/xiajingdongning/liuyangli/blob/master/Database%20Management/Design%20%26%20Implement%20a%20Relational%20Database/Practicum%20I.nb.html)
 
 
 * Name and partners name
