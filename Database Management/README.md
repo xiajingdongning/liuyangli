@@ -1,6 +1,6 @@
 # Database Management - RStudio && SQLite && MySQL [Design & Implement a Relational Database] HTML Page
 
-## [![IMAGE ALT TEXT HERE](https://github.com/xiajingdongning/liuyangli/blob/master/Arganic%20Molecule/media/Video.png)]
+## [![IMAGE ALT TEXT HERE](https://github.com/xiajingdongning/liuyangli/blob/master/Database%20Management/Design%20%26%20Implement%20a%20Relational%20Database/Practicum%20I.nb.html)]
 
 
 * Name and partners name
@@ -15,7 +15,7 @@
 * What was the most interesting part of projects? *How to look things up, how to navigate complex problems, and how to identify and resolve programming errors.*
 
 <p align="center">
-  <img src="./media/Bird Strikes In US 2000-2011.PNG" alt="picture">
+  <img src="./media/Bird Strikes In US 2000-2011.png" alt="picture">
 </p>
 
 ### Abstract
@@ -57,6 +57,6 @@ I used the OLAP star/snowflake schema to do some (simple) data mining.
 * I commit all necessary files of Practicum I to this repository Design & Implement a Relational Database folder.
 * I commit all necessary files of Practicum II to this repository Mine a Database folder.
 * Describe the two Practicums in README.md.
-* Add Explore Data Warehouses report and Investigate Database Architecture Issues report to report folder.
+* Add [Explore Data Warehouses](./report/Explore-Data-Warehouses.pdf) report and [Investigate Database Architecture Issues](./report/Investigate-Database-Architecture-Issues.LiF.LiuY.pdf) report to report folder.
 
 
