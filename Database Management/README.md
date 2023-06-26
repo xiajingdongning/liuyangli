@@ -1,6 +1,6 @@
-# Database Management - RStudio && SQLite && MySQL [Design & Implement a Relational Database] HTML Page
+# Database Management - RStudio && SQLite && MySQL [Design & Implement a Relational Database] 
 
-## [![IMAGE ALT TEXT HERE](https://github.com/xiajingdongning/liuyangli/blob/master/Database%20Management/Design%20%26%20Implement%20a%20Relational%20Database/Practicum%20I.nb.html)]
+## [HTML Page] (https://github.com/xiajingdongning/liuyangli/blob/master/Database%20Management/Design%20%26%20Implement%20a%20Relational%20Database/Practicum%20I.nb.html)
 
 
 * Name and partners name
@@ -19,14 +19,15 @@
 </p>
 
 ### Abstract
+
 *Database Management has two practicums: Practicum I / Design & Implement a Relational Database and Practicum II / Mine a Database * 
 
 ### Project Introduction
 In Practicum I, I built a database that can be used to analyze bird strikes on aircraft. For an existing data set from the FAA, 
-I built a logical data model, a relational schema, realized the relational schema in MySQL/MariaDB, 
+I built a logical data model, a relational schema, realized the relational schema in MySQL, 
 loaded data into the database, executed SQL queries, and finally performed some simple analysis of the data.
 ###
-In Practicum II, I extracted data from an XML document from the subfolder pubmed-tfm-xml and then stored the data relationally in a SQLite database. 
+In Practicum II, Minyi extracted data from an XML document from the subfolder pubmed-tfm-xml and then stored the data relationally in a SQLite database. 
 That database represents a "transactional" database. Then I extracted data from the transactional database and 
 created an "analytical" database using a star schema in MySQL. Finally, I query facts from the MySQL analytical database. 
 This will require that I connected to two different databases simultaneously -- a common occurrence in practice.

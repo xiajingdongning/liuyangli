@@ -25,7 +25,8 @@ I have the passion for both tech && art and I will treasure any opportunity to p
 * Algorithm - Machine Learning [An analysis on Clustering based on Kruskal’s Algorithm](https://github.com/xiajingdongning/liuyangli/tree/master/An%20analysis%20on%20Clustering%20based%20on%20Kruskal%E2%80%99s%20Algorithm)
 * Mobile App Development - Android && AR [Arganic Molecule](https://github.com/xiajingdongning/liuyangli/tree/master/Arganic%20Molecule)
 * Database Management - RStudio && SQLite && MySQL [Design & Implement a Relational Database] (https://github.com/xiajingdongning/liuyangli/tree/master/Database%20Management/Design%20%26%20Implement%20a%20Relational%20Database)
-[Mine a Database](https://github.com/xiajingdongning/liuyangli/tree/master/Database%20Management/Mine%20a%20Database)
+* Database Management - RStudio && XML && MySQL[Mine a Database](https://github.com/xiajingdongning/liuyangli/tree/master/Database%20Management/Mine%20a%20Database)
+
 ## Screenshots
 ![Famous Artist Introduction Book](https://github.com/xiajingdongning/liuyangli/blob/master/Famous%20Artist%20Introduction%20Book/media/Cover.jpg)
 ![My Little Town](https://github.com/xiajingdongning/liuyangli/blob/master/My%20Little%20Town/part1/media/MyTown01.jpg)
