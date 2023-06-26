@@ -1,0 +1,343 @@
+---
+title: "Practicum I / Design & Implement a Relational Database"
+output:
+  pdf_document: default
+  html_notebook: default
+Class: CS5200 Spring 2023
+Author: Yangli Liu  liu.yangl@northeastern.edu
+---
+# I installed MySQL database locally
+```{r}
+library(RMySQL)
+```
+
+# I create a database named BirdStrike, please replace this and user and password when testing
+```{r}
+con <- dbConnect(MySQL(),
+                 dbname = "BirdStrike",
+                 host = "localhost",
+                 port = 3306,
+                 user = "root",
+                 password = "YL1saf!!2015")
+```
+
+# create the airports table
+```{r}
+# Create the airports table
+dbSendQuery(con, "CREATE TABLE airports (
+                    aid INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+                    airportName VARCHAR(255),
+                    airportCode VARCHAR(255),
+                    state VARCHAR(255)
+                )")
+```
+
+# create the incidents table
+```{r}
+# Create the incidents table
+dbSendQuery(con, "CREATE TABLE incidents (
+                 rid INT NOT NULL,
+                 date DATE NOT NULL,
+                 origin INT NOT NULL,
+                 airline VARCHAR(255) NOT NULL,
+                 aircraft VARCHAR(255) NOT NULL,
+                 flightPhase VARCHAR(255) NOT NULL,
+                 altitude VARCHAR(255) NOT NULL,
+                 conditions VARCHAR(255),
+                 warning BOOLEAN,
+                 PRIMARY KEY (rid)
+                 )")
+```
+
+# create the conditions lookup table
+```{r}
+dbSendQuery(con, "CREATE TABLE conditions (
+                 cid INT NOT NULL AUTO_INCREMENT,
+                 conditions VARCHAR(255) ,
+                 explanation VARCHAR(255),
+                 PRIMARY KEY (cid)
+                 )")
+```
+# Add foreign key to airports table
+```{r}
+dbSendQuery(con, "ALTER TABLE incidents ADD COLUMN origin_id INT NOT NULL DEFAULT 0,
+                  ADD CONSTRAINT fk_origin FOREIGN KEY (origin_id) 
+                  REFERENCES airports(aid)")
+```
+
+# Add foreign key to incidents table
+```{r}
+dbSendQuery(con, "ALTER TABLE incidents ADD COLUMN conditions_id INT NOT NULL DEFAULT 0,
+                  ADD CONSTRAINT fk_conditions FOREIGN KEY (conditions_id) 
+                  REFERENCES conditions(cid)")
+```
+
+# Load the CSV file into R
+```{r}
+bird_strikes <- read.csv("BirdStrikesData-V2.csv",stringsAsFactors = FALSE, na.strings = c("", "NA", "NaN"))
+```
+
+```{r}
+bird_strikes[is.na(bird_strikes)] <- "unknown"
+```
+
+```{r}
+bird_strikes$origin[bird_strikes$origin == "unknown"] <- 0
+```
+
+```{r}
+bird_strikes$flight_date[bird_strikes$flight_date == "unknown"] <- '1/1/1000 0:00'
+```
+
+```{r}
+bird_strikes$pilot_warned_flag[bird_strikes$pilot_warned_flag == "unknown"] <- 'N'
+```
+
+```{r}
+bird_strikes$airport[bird_strikes$airport == "CHICAGO O'HARE INTL ARPT"] <- 'CHICAGO O HARE INTL ARPT'
+```
+
+```{r}
+bird_strikes$airport[bird_strikes$airport == "KINGS LAND O' LAKES ARPT"] <- 'KINGS LAND O LAKES ARPT'
+```
+
+```{r}
+bird_strikes$airport[bird_strikes$airport == "DAVID'S ARPT"] <- 'DAVIDS ARPT'
+```
+
+```{r}
+bird_strikes$airport[bird_strikes$airport == "LEE'S SUMMIT MUNICIPAL ARPT"] <- 'LEES SUMMIT MUNICIPAL ARPT'
+```
+
+# Create the needed subset data frame
+```{r}
+subset_data <- subset(bird_strikes, select = c(rid, aircraft, airport, wildlife_struck, flight_date, airline, origin, flight_phase, sky_conditions, pilot_warned_flag, altitude_ft))
+
+```
+
+# Loop over each row in the bird_strikes subset data frame and insert the data into the three tables
+```{r}
+for (i in 1:nrow(subset_data)) {
+  airportName <- subset_data[i, "airport"]
+  state <- subset_data[i, "origin"]
+  
+  query <- sprintf("INSERT INTO airports (airportName, state) VALUES ('%s', '%s')",
+                   airportName, state)
+  
+  dbSendQuery(con, query)
+}
+```
+
+```{r}
+for (i in 1:nrow(subset_data)) {
+  conditions <- subset_data[i, "sky_conditions"]
+  
+  c_query <- sprintf("INSERT INTO conditions (conditions) VALUES ('%s')",
+                   conditions)
+  
+  dbSendQuery(con, c_query)
+}
+```
+
+
+```{r}
+for (i in 1:nrow(subset_data)) {
+  # Extract the data from the current row
+  rid <- subset_data[i, "rid"]
+  date <- format(strptime(subset_data[i, "flight_date"], format="%m/%d/%Y %H:%M"), "%Y-%m-%d")
+  origin <- subset_data[i, "wildlife_struck"]
+  airline <- subset_data[i, "airline"]
+  aircraft <- subset_data[i, "aircraft"]
+  flightPhase <- subset_data[i, "flight_phase"]
+  altitude <- subset_data[i, "altitude_ft"]
+  conditions <- subset_data[i, "sky_conditions"]
+  warning <- ifelse(subset_data[i, "pilot_warned_flag"] == "Y", TRUE, FALSE)
+  airportName <- subset_data[i, "airport"]
+  
+  # Get the origin airport ID
+  origin_query <- sprintf("SELECT aid FROM airports WHERE airportName = '%s'", airportName)
+  origin_res <- dbGetQuery(con, origin_query)
+  if (nrow(origin_res) == 0) {
+    warning(sprintf("Could not find airport with code %s", airportName))
+    origin_id <- 0
+  } else {
+    origin_id <- origin_res$aid[1]
+  }
+  
+  # Get the conditions ID
+  conditions_query <- sprintf("SELECT cid FROM conditions WHERE conditions = '%s'", conditions)
+  conditions_res <- dbGetQuery(con, conditions_query)
+  if (nrow(conditions_res) == 0) {
+    warning(sprintf("Could not find conditions with name %s", conditions))
+    conditions_id <- 0
+  } else {
+    conditions_id <- conditions_res$cid[1]
+  }
+  
+  # Build the SQL INSERT statement
+  insert_query <- sprintf("INSERT INTO incidents (rid, date, origin, airline, aircraft, flightPhase, altitude, conditions, warning, origin_id, conditions_id) VALUES (%d, '%s', %d, '%s', '%s', '%s', '%s', '%s', %s, %d, %d)", rid, date, origin, airline, aircraft, flightPhase, altitude, conditions, warning,  origin_id, conditions_id)
+  
+  # Execute the SQL INSERT statement
+  dbSendQuery(con, insert_query)
+}
+```
+
+# Harmonize the flight phases
+```{r}
+# Harmonize the flight phases
+dbSendQuery(con, 
+"UPDATE incidents SET flightPhase = 
+ CASE 
+     WHEN flightPhase LIKE '%take-off%' OR flightPhase LIKE '%climb%' THEN 'takeoff'
+     WHEN flightPhase LIKE '%landing roll%' OR flightPhase LIKE '%approach%' THEN 'landing'
+     WHEN flightPhase LIKE '%descent%' THEN 'inflight'
+     ELSE 'unknown'
+ END")
+```
+
+# Remove military flights
+```{r}
+dbSendQuery(con, "DELETE FROM incidents WHERE airline LIKE '%military%'")
+```
+
+# Show that the loading of the data worked by displaying parts of each table 
+```{r}
+airports <- dbGetQuery(con, "SELECT * FROM airports LIMIT 10")
+print(airports)
+```
+```{r}
+incidents <- dbGetQuery(con, "SELECT * FROM incidents LIMIT 10")
+print(incidents)
+```
+
+```{r}
+conditions <- dbGetQuery(con, "SELECT * FROM conditions LIMIT 15")
+print(conditions)
+```
+
+# Find the top-10 airlines with the most number of incidents
+```{sql connection=con}
+SELECT airline, COUNT(*) AS num_incidents
+FROM incidents
+GROUP BY airline
+ORDER BY num_incidents DESC
+LIMIT 10;
+```
+
+# Find the flight phase that had an above average number bird strike incidents
+```{sql connection=con}
+SELECT flightPhase, COUNT(*) AS num_incidents
+FROM incidents
+WHERE origin > 0
+GROUP BY flightPhase
+HAVING COUNT(*) > (
+    SELECT AVG(num_incidents)
+    FROM (
+        SELECT COUNT(*) AS num_incidents
+        FROM incidents
+        WHERE origin > 0
+        GROUP BY flightPhase
+    ) AS subquery
+)
+```
+
+# Find the maximum number of bird strike incidents by month (across all years)
+```{sql connection=con}
+SELECT 
+    MONTH(date) AS month,
+    COUNT(*) AS max_incidents
+FROM 
+    incidents
+WHERE 
+    origin > 0
+GROUP BY 
+    MONTH(date)
+ORDER BY 
+    COUNT(*) DESC
+LIMIT 1;
+```
+
+# Visualizes the number of bird strikes incidents per year from 2005 to 2011
+```{r}
+library(ggplot2)
+```
+
+
+```{r}
+result <- dbGetQuery(con, "SELECT YEAR(date) AS year, COUNT(*) AS num_incidents FROM incidents WHERE YEAR(date) BETWEEN 2005 AND 2011 AND origin > 0 GROUP BY YEAR(date) ORDER BY YEAR(date)")
+```
+
+
+```{r}
+ggplot(result, aes(x=year, y=num_incidents)) +
+  geom_col(fill="red", alpha=0.6) +
+  scale_x_continuous(breaks = seq(2005, 2011, by = 1)) +
+  labs(title = "Number of Bird Strikes Incidents Per Year (2005-2011)",
+       x = "Year", y = "Number of Incidents")
+```
+
+# Create a stored procedure in MySQL
+```{r}
+dbSendQuery(con, "CREATE PROCEDURE addBirdStrikeIncident(
+                     IN incident_date DATE,
+                     IN airport_name VARCHAR(255),
+                     IN airport_code VARCHAR(255),
+                     IN airline_name VARCHAR(255),
+                     IN aircraft_type VARCHAR(255),
+                     IN flight_phase VARCHAR(255),
+                     IN altitude VARCHAR(255),
+                     IN weather_conditions VARCHAR(255),
+                     IN warning BOOLEAN
+                 )
+                 BEGIN
+                     DECLARE airport_id INT;
+                     DECLARE conditions_id INT;
+                     DECLARE incident_rid_val INT;
+
+                     # Check if the airport already exists in the database
+                     SELECT aid INTO airport_id FROM airports WHERE airportName = airport_name;
+
+                     # If the airport does not exist, insert it into the airports table
+                     IF airport_id IS NULL THEN
+                         INSERT INTO airports (airportName, airportCode, state)
+                         VALUES (airport_name, airport_code, 'Unknown');
+                         SET airport_id = LAST_INSERT_ID();
+                     END IF;
+
+                     # Check if the weather conditions already exist in the database
+                     SELECT cid INTO conditions_id FROM conditions WHERE conditions = weather_conditions;
+
+                     # If the weather conditions do not exist, insert them into the conditions table
+                     IF conditions_id IS NULL THEN
+                         INSERT INTO conditions (conditions, explanation)
+                         VALUES (weather_conditions, 'Unknown');
+                         SET conditions_id = LAST_INSERT_ID();
+                     END IF;
+                     
+                     # Get the next available rid value
+                     SELECT MAX(rid) INTO incident_rid_val FROM incidents;
+                     SET incident_rid_val = incident_rid_val + 1;
+
+
+                     # Insert the new incident into the incidents table
+                     INSERT INTO incidents (rid, date, origin, airline, aircraft, flightPhase, altitude, conditions, warning, origin_id, conditions_id)
+                     VALUES (incident_rid_val, incident_date, airport_id, airline_name, aircraft_type, flight_phase, altitude, weather_conditions, warning, airport_id, conditions_id);
+                 END")
+```
+
+# Call the stored procedure to add a new bird strike incident
+```{r}
+dbSendQuery(con, "CALL addBirdStrikeIncident('2023-03-15', 'Boston Logan International Airport', 'BOS', 'Delta Air Lines', 'Boeing 737-900ER', 'Takeoff', '10,000 feet', 'Cloudy', FALSE)")
+```
+
+#Retrieve the newly inserted incident from the database and display it in R
+```{r}
+new_incident <- dbGetQuery(con, "SELECT * FROM incidents WHERE date = '2023-03-15'")
+print(new_incident)
+```
+
+# Close the connection
+```{r}
+dbDisconnect(con)
+```
+

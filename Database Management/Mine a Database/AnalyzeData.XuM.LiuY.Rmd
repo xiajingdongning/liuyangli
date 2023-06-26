@@ -1,0 +1,55 @@
+---
+title: "Practicum2 part3 - Analyze Data"
+author: "Minyi Xu & Yangli Liu"
+output: html_notebook
+---
+# I installed MySQL database locally
+```{r}
+library(RMySQL)
+```
+
+# I create a database named LoadDataWarehouse, please replace this and user and password when testing
+```{r}
+con <- dbConnect(MySQL(),
+                 dbname = "LoadDataWarehouse",
+                 host = "localhost",
+                 port = 3306,
+                 user = "root",
+                 password = "YL1saf!!2015")
+```
+
+# Query to get the top ten authors with the most publications
+```{r}
+query1 <- "SELECT author_name, articles_count
+           FROM AuthorFact
+           ORDER BY articles_count DESC
+           LIMIT 10"
+```
+
+# Execute the query and store the results in a data frame then print the result
+```{r}
+result1 <- dbGetQuery(con, query1)
+cat("Top Ten Authors with the Most Publications:\n")
+print(result1)
+```
+
+# Query to get the top journal with the most articles published per year
+```{r}
+query2 <- "SELECT journal_name, year, SUM(articles_per_month) AS Num_Article_Per_year 
+           FROM JournalFact
+           GROUP BY journal_name, year
+           ORDER BY Num_Article_Per_year DESC
+           LIMIT 1"
+```
+
+# Execute the query and store the results in a data frame then print the result
+```{r}
+result2 <- dbGetQuery(con, query2)
+cat("\nTop Journal with the Most Articles Published per Year:\n")
+print(result2)
+```
+
+# Close the database connection
+```{r}
+dbDisconnect(con)
+```
