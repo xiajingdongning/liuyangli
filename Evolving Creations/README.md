@@ -1,6 +1,6 @@
 # Processing - Generative Art [Evolving Creations] Demo
 
-## [![IMAGE ALT TEXT HERE](./Celestial Dreams/Celestial Dreams 03.png)](https://youtu.be/8ZmZGKu8iA8) 
+## [![IMAGE ALT TEXT HERE](https://github.com/xiajingdongning/liuyangli/blob/master/Evolving%20Creations/Ethereal_Chaos/Ethereal%20Chaos.jpg)](https://youtu.be/8ZmZGKu8iA8) 
 
 * Author
  *Yangli Liu*
@@ -14,7 +14,8 @@
 * What was the most interesting part of this project? *How to manipulate codes to create desired visual outcomes.*
 
 <img src="./Celestial Dreams/Celestial Dreams 04.png" alt="picture">
-<img src="./Ethereal Chaos/Ethereal Chaos.jpg" alt="picture">
+
+<img src="./Ethereal_Chaos/Ethereal Chaos.jpg" alt="picture">
 
 ### Project Introduction
 Generative art is a captivating realm where imagination intertwines with code, enabling the creation of dynamic 
