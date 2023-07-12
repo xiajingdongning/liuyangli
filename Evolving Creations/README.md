@@ -14,8 +14,7 @@
 * What was the most interesting part of this project? *How to manipulate codes to create desired visual outcomes.*
 
 <img src="./Celestial Dreams/Celestial Dreams 04.png" alt="picture">
-
-<img src="./Ethereal_Chaos/Ethereal Chaos.jpg" alt="picture">
+<img src="./Celestial Dreams/Celestial Dreams 05.jpg" alt="picture">
 
 ### Project Introduction
 Generative art is a captivating realm where imagination intertwines with code, enabling the creation of dynamic 
