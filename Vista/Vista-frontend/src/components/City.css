@@ -1,0 +1,144 @@
+* {
+  -webkit-box-sizing: content-box !important;
+     -moz-box-sizing: content-box !important;
+          box-sizing: content-box !important;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: content-box !important;
+     -moz-box-sizing: content-box !important;
+          box-sizing: content-box !important;
+}
+
+.City {
+    max-height: 100vh;
+    overflow: hidden; 
+    overflow-y: scroll;
+    font-family: roboto;
+}
+
+.container {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: auto;
+}
+
+.cityGuideContainer {
+    background-color: black;
+    width: 100%;
+    margin-top: 14vh;
+}
+
+.cityName {
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+}
+
+.responsive-two-column-grid {
+    display: block;
+    padding-left: 1rem;
+    padding-right: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.infoPanel {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+  }
+
+.imagePanel {
+  padding: 2%;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+}
+
+.cityImage {
+    width: 70%;
+    min-width: 150px;
+    padding: 1rem;
+    object-fit: cover;
+    padding-left: 15%;
+}
+
+.accordion {
+  width: 80%;
+  --bs-accordion-bg: transparent;
+  --bs-accordion-color: white;
+  --bs-accordion-border-color: transparent;
+  --bs-accordion-active-color: transparent;
+  --bs-accordion-btn-focus-border-color: transparent;
+  font: 1em;
+  justify-content: center;
+  padding-left: 7%;
+}
+
+.accordion-button {
+    background: linear-gradient(30deg, #ff7f29, #bb47ff, #9747ff);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+    font-weight: bold;
+}
+
+.accordion-button:focus {
+    background: linear-gradient(30deg, #ff7f29, #bb47ff, #9747ff);
+    border-color: white;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+}
+
+.buttonSpace {
+  display: flex;
+  justify-content: center;
+}
+
+.videoButton {
+  background: linear-gradient(30deg, #ff7f29, #bb47ff, #9747ff);
+  border-color: black;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+  color: #fff;
+  background: linear-gradient(30deg, #ff7f29, #bb47ff, #9747ff);
+  border-color: white;
+}
+
+.subtitle {
+  padding-top: 2%;
+}
+
+@media (min-width:768px) {
+  .responsive-two-column-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 5rem;
+  }
+
+  .container {
+    background-color: black;
+    min-height: 100%;
+  }
+
+  .imagePanel {
+    padding: 2%;
+    justify-content: center;
+  }
+
+  .cityImage {
+    width: 70%;
+    min-width: 150px;
+    padding: 1rem;
+    object-fit: cover;
+}
+}

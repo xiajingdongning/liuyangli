@@ -1,0 +1,380 @@
+.Video{
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hint{
+  font-size: 0;
+}
+
+.hint.collapsed{
+  font-style: italic;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.comment-container {
+    width: 100%;
+    background: linear-gradient(30deg, #ffcd29, #bb47ff, #9747ff);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 1px;
+    box-sizing: border-box;
+    height: 20%;
+    display: flex;
+    transition: height 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .comment-container.collapsed {
+    height: 35px; /* Set the height you want when collapsed */
+  }
+
+
+  
+  .comment-left-box textarea {
+    width: 100%;
+    resize: none;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 0.8rem;
+    background-color: #E4CCFF;
+  }
+  .comment-left-box {
+    position: fixed;
+    left: 0;
+    flex: 1; 
+    margin-left: 3%;
+    padding: 18px;
+  }
+
+  .review-item {
+    border-bottom: 1px solid #ccc;
+    padding: 8px 0;
+    font-size: 14px;
+    color: black;  
+  }
+
+  .review-item button {
+    background-color: #bb47ff;
+    color: white;
+    border: none;
+    font-size: 0.7rem;
+    font-family: 'Roboto';
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 8px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+
+  .review-item button:last-child {
+    margin-right: 0;
+  }
+
+  
+  .comment-right-box {
+    flex: 1; 
+    position: fixed;
+    bottom: 0%;
+    left: 0;
+    color: white;
+    padding: 18px;
+    border-radius: 5px; 
+    margin-left: 65%;
+  }
+
+  .comment-right-box textarea { 
+    width: 100%;
+    resize: none;
+    font-family: 'Roboto';
+    font-size: 0.7rem;
+    color:black;
+    background-color: #E4CCFF;
+    font-weight: bold;
+  }
+
+  .comment-bar {
+    white-space: nowrap;
+    overflow: hidden;
+    overflow-y: auto; 
+    max-height: 80%; 
+  }
+
+  .star-hint{
+    position: absolute;
+    bottom: 68%; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: large;
+    color:white;
+  }
+  
+  .comment-bar.collapsed {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 30px; 
+  }
+  
+  .comment-bar.collapsed form {
+    display: none;
+  }
+  
+  .button-style.collapsed {
+    display: none;
+  }
+  
+  .comment-left-box.collapsed,
+  .comment-right-box.collapsed {
+    display: none;
+    overflow: hidden;
+  }
+
+.button-style{
+    background: #bb47ff;
+    color: white;
+    border: none;
+    font-size: 0.9rem;
+    font-family: 'Roboto';
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1.3px solid white;
+    padding: 5px 0px;
+    cursor: pointer;
+    margin-left: 38%;
+    padding: 10px 10px;
+    margin-top: 1px;
+}
+
+.button-style-new{
+  background: #bb47ff;
+  color: white;
+  border: none;
+  font-size: 0.9rem;
+  font-family: 'Roboto';
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid white;
+  padding: 5px 0px;
+  cursor: pointer;
+  margin-left: 40%;
+  padding: 10px 10px;
+  margin-top: 2px;
+}
+
+.star-icon {
+  position: absolute;
+  bottom: 20%; 
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 6rem;
+  color: #ffcd29; /* Empty heart color */
+  cursor: pointer;
+}
+
+.star-icon.empty {
+  font-size: 6rem;
+  color: #ffcd29; /* Hide the icon's fill color */
+}
+
+.commentBox {
+  background-color: #E4CCFF;
+  padding: 1.2%;
+  font-size: 1rem;
+  color: black;
+  height: 15vh;
+  width: 600px;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+
+.comment-shape {
+  display: flex;
+  border-bottom: solid #9747ff;
+  background-color: #E4CCFF;
+  padding: 1%;
+  scrollbar-color: #9747ff;
+}
+
+.action-buttons {
+  padding: 3%;
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  align-items: center;
+  margin-left: auto;
+}
+
+.edit {
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 3%;
+}
+
+.edit:hover {
+  background-color: #9747ff;
+  color: white;
+}
+
+.delete {
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 3%;
+}
+
+.delete:hover {
+  background-color: black;
+  color: white;
+}
+
+.comment-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: pre-line;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+
+@media (max-width: 1280px) {
+  /* Adjust the comment-container height for smaller screens */
+  .comment-container {
+    height: 26%;
+  }
+
+  
+  /* Adjust the comment-left-box and comment-right-box layout for smaller screens */
+  .comment-left-box,
+  .comment-right-box {
+    position: static;
+    width: 60%;
+    margin-left: 0;
+  }
+  
+  .comment-left-box textarea,
+  .comment-right-box textarea {
+    width: 100%;
+  }
+  
+  /* Hide the form submit button when the comment bar is collapsed on smaller screens */
+  .comment-bar.collapsed form {
+    display: none;
+  }
+  
+  .button-style.collapsed {
+    display: none;
+  }
+  
+  /* Show the comment text when the comment bar is collapsed on smaller screens */
+  .comment-bar.collapsed textarea {
+    display: block;
+  }
+
+  .star-icon {
+    position: static;
+    margin-left: 30%;
+    margin-top: 50%;
+    font-size: 3rem; 
+  }
+
+  .star-icon.empty { 
+    font-size: 3rem;
+  }
+  
+  .star-icon.collapsed {
+    display: none;
+  }
+
+  .button-style {
+    margin-left: 20%; 
+    padding: 8px 15px; 
+    font-size: 0.6rem;
+  }
+
+  .button-style-new {
+    margin-left: 17%; 
+    padding: 8px 15px; 
+    font-size: 0.6rem;
+  }
+
+  iframe {
+    /* Set dimensions */
+    width: 100%;
+    height: 92%;
+    position: absolute;
+  }
+
+  .commentBox {
+    width: 100%;
+    min-height: 150px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    margin-left: 0; 
+  }
+
+  .edit,
+  .delete {
+    width: auto;
+  }
+
+  .star-hint{
+    position: absolute;
+    bottom: 85%; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8px;
+    color:white;
+  }
+} 
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .star-hint{
+    bottom: 14%; 
+    font-size: 18px;
+    color:white;
+  }
+}
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .button-style {
+    margin-left: 38%; 
+    font-size: 0.6rem;
+  }
+
+  .comment-left-box textarea
+  {
+    font-size: 0.6rem;
+  }
+
+  .commentBox {
+    font-size: 0.6rem;
+    min-height: 110px;
+  }
+
+  .edit,
+  .delete {
+    font-size: 0.6rem;
+  }
+
+  .star-hint{
+    bottom: 1%; 
+    font-size: 14px;
+    color:white;
+    left: 45%;
+  }
+}

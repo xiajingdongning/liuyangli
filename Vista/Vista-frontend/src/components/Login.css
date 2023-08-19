@@ -1,0 +1,10 @@
+#googleAuth {  
+    transform: scale(1.2);
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    #googleAuth{
+    transform: scale(0.7);
+    }
+}

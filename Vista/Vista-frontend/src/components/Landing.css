@@ -1,0 +1,155 @@
+body {
+  overflow: hidden;
+  height:s 100%;}
+::-webkit-scrollbar {
+  width: 15px; 
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background-color: #bb47ff;
+}
+
+.Landing {
+    background-color: rgb(228, 204, 255, 1);
+    min-height: 100vh;
+  }
+
+.overlay-text {
+    position: absolute;
+    top: 8.8%;
+    left: 13%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  
+  .overlay-text h1 {
+    font-size: 4rem;
+    color: #FFCD29;
+    text-shadow: 6px 4px 4px rgba(0, 0, 0, 1);
+  }
+
+  @keyframes flyIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .overlay-text .typing-text {
+    display: flex; 
+  }
+  
+  .overlay-text .letter {
+    animation: flyIn 2s forwards cubic-bezier(0.18, 0.89, 0.32, 1.28); 
+  }
+
+  
+  .overlay-dropdown {
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  
+  .dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .dropdown-toggle {
+    background: linear-gradient(30deg, #ff7f29, #bb47ff, #9747ff);
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 2rem; 
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 4.3rem;
+    background: linear-gradient(30deg, #ffcd29, #bb47ff);
+    border: 2px solid black;
+    border-radius: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0;
+    z-index: 2;
+    display: none;
+    font-family: 'Roboto';
+    font-size: 1.5rem;
+    color: Black;
+    text-align: center;
+    overflow-y: auto;
+    max-height: 180px;
+  }
+  
+  .dropdown-menu li {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu li:hover {
+    background: linear-gradient(100deg, #bb47ff, #ff7f29);
+    color: whitesmoke;
+    text-shadow: 3px 2px 3px rgba(0, 0, 0, 1);
+    font-style: italic;
+  }
+  
+  .dropdown.show .dropdown-menu {
+    display: block;
+  }
+
+  .custom-cursor {
+    position: absolute;
+    width: 200px; 
+    height: 200px; 
+    background-image: url('https://i.gifer.com/YAgE.gif'); /* Path to your GIF image */
+    background-size: cover;
+    pointer-events: none; 
+    z-index: 1; 
+  }
+
+  .custom-cursor.flipped {
+  transform: scaleX(-1);
+}
+
+@media (max-width: 1280px) {
+  .overlay-text {
+    top: 15%; 
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .overlay-text h1 {
+    font-size: 3rem; /* Reduce the font size on smaller screens */
+  }
+
+  .overlay-dropdown {
+    top: 50%; 
+  }
+
+  .dropdown-toggle {
+    font-size: 1rem; /* Reduce the font size on smaller screens */
+  }
+
+  .dropdown-menu {
+    left: 2%; 
+    font-size: 1rem;
+  }
+
+  .custom-cursor {
+    display: none; 
+  }
+}

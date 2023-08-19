@@ -1,0 +1,214 @@
+.Profile {
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
+.profile-container{
+  background:black; 
+  width: 100%;
+  height: 90vh;
+  margin-top: 14vh;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+  overflow-y: auto;
+}
+
+
+
+.overlay-text-new {
+position: absolute;
+top: 8.8%;
+left: 13%;
+transform: translate(-50%, -50%);
+z-index: 1;
+}
+
+.overlay-text-new h2 {
+  font-size: 4rem;
+  color: #ffcd29;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+
+}
+
+.userContainer {
+display: flex;
+height: 100vh; 
+}
+
+.left-column {
+flex: 1; 
+flex-direction: column;
+background-color: 255, 232, 163;
+margin-top: 2%;
+padding: 10px;
+}
+
+.right-column {
+flex: 1; 
+display: flex;
+flex-direction: column;
+}
+
+.title{
+width: 30%;
+height: 7%; 
+margin-top: 6%;
+margin-left: 15%;
+background: linear-gradient(30deg, #ff7f29, #bb47ff, #9747ff);
+border-radius: 10px;
+font-family: 'Roboto';
+font-weight: bold;
+font-size: 1.7rem; 
+color: white;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.box {
+width: 66%;
+height: 23%; 
+border-radius: 16px;
+overflow-y: scroll;
+padding: 2%;
+font-size: 1.4rem; 
+}
+
+.box-top {
+margin-left: 15%;
+background: linear-gradient(30deg, #ffcd29, #bb47ff);
+}
+
+.box-bottom {
+margin-left: 15%;
+background: linear-gradient(30deg, #ffcd29, #bb47ff);
+border-radius: 10px;
+overflow-y: scroll;
+padding: 2%;
+}
+
+.save{
+width: 22%;
+height: 5%; 
+margin-top: 4%;
+margin-left: 62.8%;
+background: linear-gradient(30deg, #ff7f29, #bb47ff, #9747ff);
+background-color: #9747FF; 
+border-radius: 5px;
+font-family: 'Roboto';
+font-weight: bold;
+font-style: italic;
+font-size: 1.4rem; 
+color: white;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.userInfo {
+padding: 2%;
+font-family: 'Roboto';
+color: white;
+font-weight: bold;
+font-size: 1.4rem; 
+}
+
+.userProfile {
+margin-left: 15%;
+}
+
+.profilePhoto {
+border-radius: 47%;
+width: 70%;
+height: auto;
+}
+
+.name-photo {
+display: flex;
+align-items: center;
+font-family: 'Roboto';
+font-size: 1.6rem; 
+font-weight: bold;
+color: white;
+}
+
+.comment {
+  font-size: 1.4rem; 
+  color: white;
+}
+
+@media (max-width: 1280px) {
+.overlay-text-new {
+  top: 5%; /* Adjust the vertical position on smaller screens */
+  left: 23%;
+  transform: translateX(-50%);
+}
+
+.overlay-text-new h2 {
+  font-size: 2rem; /* Reduce the font size on smaller screens */
+}
+
+.title{
+  width: 80%;
+  height: 5%;
+  border-radius: 5px;
+  margin-top: 30%;
+  margin-left: 4%;
+  font-size: 0.8rem; 
+}
+
+.save{
+  width: 44%;
+  height: 4%; 
+  margin-left: 22%;
+  font-style: italic;
+  font-size: 0.8rem; 
+}
+
+.box-top {
+  margin-top: 10%;
+  width: 90%;
+  margin-left: 0%;
+  font-size: 0.8rem; 
+}
+
+.box-bottom {
+  margin-top: 10%;
+  width: 90%;
+  margin-left: 0%;
+  font-size: 0.8rem; 
+}
+
+
+.userInfo {
+  font-size: 0.8rem;
+}
+
+.profilePhoto {
+  width: 40%;
+  max-width: 200px;
+}
+
+.name {
+  width: 100px;
+  margin-right: 20%;
+  font-size: 0.8rem;
+}
+
+.comment {
+  font-size: 0.8rem;
+}
+
+.name-photo {
+  display: flex;
+}
+
+.userProfile {
+  margin-left: 6%;
+}
+
+}
