@@ -31,27 +31,27 @@ such as GIF cursors and a captivating 360-degree landing page, aiming to create 
 
 ### Project Introduction/Key Features
 * GIF Cursor and 360-Degree Landing Page: The project leverages GIF cursor technology and a dynamic 360-degree landing page to establish an interactive 
-and enjoyable user interface that simulates a travel experience inside the digital painting.* 
+and enjoyable user interface that simulates a travel experience inside the digital painting.
 
 * City Selection and Guide Pages: A dropdown menu on the landing page enables users to select their desired city. Upon selection, users are seamlessly 
 redirected to individual city guide pages, which furnish comprehensive information about the city's history, notable attractions, distinguished restaurants, 
-and vibrant neighborhoods.*
+and vibrant neighborhoods.
 
 * 360-Degree Video Tours: The platform showcases a repository of hosted 360-degree video content, affording users the opportunity to virtually tour diverse locations, 
-delivering an immersive experience akin to actual travel.*
+delivering an immersive experience akin to actual travel.
 
 * City Collection and Personalization: Users can personalize their experience by saving preferred cities to their City Collection. 
 By clicking the star icon, selected cities are saved as cards. The collection can then be organized through a swipe-based interface, 
-allowing users to manage their selections effortlessly.*
+allowing users to manage their selections effortlessly.
 
 * Comment Functionality: Vista facilitates user engagement by permitting comments on specific 360-degree videos. 
-Users can make, edit, or delete their comments, fostering an interactive community within the platform.*
+Users can make, edit, or delete their comments, fostering an interactive community within the platform.
 
 * User Profile Page: The user profile page offers a comprehensive overview of user activities. This includes a log of the comments users 
-have contributed and the cities they have virtually explored, creating a sense of personalization and achievement.*
+have contributed and the cities they have virtually explored, creating a sense of personalization and achievement.
 
 * About Us Page: The final page is dedicated to introducing the project's creators. This section provides succinct information about 
-the development team, offering users insights into the minds behind the creation of this unique virtual exploration platform.*
+the development team, offering users insights into the minds behind the creation of this unique virtual exploration platform.
 
 ## How to run this project
 All the data files are stored into MogoDB. We use React framework and JavaScript, HTML, CSS to create the project. 
