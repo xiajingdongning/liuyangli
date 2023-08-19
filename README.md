@@ -26,7 +26,7 @@ I have the passion for both tech && art and I will treasure any opportunity to p
 * Mobile App Development - Android && AR [Arganic Molecule](https://github.com/xiajingdongning/liuyangli/tree/master/Arganic%20Molecule)
 * Database Management - RStudio && SQLite && MySQL && XML [Design and Implement a Relational Database / Mine a Database](https://github.com/xiajingdongning/liuyangli/tree/master/Database%20Management)
 * Processing - Generative Art [Evolving Creations](https://github.com/xiajingdongning/liuyangli/tree/master/Evolving%20Creations)
-* Web Development - MERN stack [Vista](https://github.com/xiajingdongning/liuyangli/tree/master/Vista)
+* Web Development - MERN Stack && 360-Degree [Vista](https://github.com/xiajingdongning/liuyangli/tree/master/Vista)
 
 ## Screenshots
 ![Famous Artist Introduction Book](https://github.com/xiajingdongning/liuyangli/blob/master/Famous%20Artist%20Introduction%20Book/media/Cover.jpg)
